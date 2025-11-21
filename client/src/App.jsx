@@ -383,6 +383,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [joinId, setJoinId] = useState("");
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+
   // ------------------------------------------------------------
   // FINAL FIXED SOCKET INITIALIZER
   // ------------------------------------------------------------
@@ -412,7 +414,7 @@ function App() {
   async function handleRegister() {
     setLoading(true);
 
-    const res = await fetch("http://localhost:4000/auth/register", {
+    const res = await fetch(`${BACKEND_URL}/auth/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password }),
@@ -434,7 +436,7 @@ function App() {
   async function handleLogin() {
     setLoading(true);
 
-    const res = await fetch("http://localhost:4000/auth/login", {
+    const res = await fetch(`${BACKEND_URL}/auth/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

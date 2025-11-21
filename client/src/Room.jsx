@@ -1616,7 +1616,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
       }
 
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      console.log("🎤 (answerer) got local stream", stream);
+      console.log(" (answerer) got local stream", stream);
       localStreamRef.current = stream;
 
       const pc = new RTCPeerConnection({
