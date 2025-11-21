@@ -389,19 +389,19 @@ function App() {
   useEffect(() => {
     if (!token) return;
 
-    console.log("🔥 Creating NEW socket…");
+    console.log("Creating NEW socket…");
 
     const s = connectSocket(token);
 
     s.on("connect", () => {
-      console.log("🔥 SOCKET CONNECTED WITH ID:", s.id);
+      console.log(" SOCKET CONNECTED WITH ID:", s.id);
     });
 
     window.__socket = s;
     setSocket(s);
 
     return () => {
-      console.log("❌ Cleaning socket:", s.id);
+      console.log(" Cleaning socket:", s.id);
       s.disconnect();
     };
   }, [token]);  // ⬅ ONLY token here
@@ -531,7 +531,7 @@ function App() {
             socket.emit("lobby:create_room", (res) => {
   console.log("Create room response:", res);
   if (res.ok) {
-    socket.lastCreatedRoom = res.roomId;   // ⭐ VERY IMPORTANT
+    socket.lastCreatedRoom = res.roomId;   //  VERY IMPORTANT
     setRoomId(res.roomId);
   } else {
     alert(res.error);

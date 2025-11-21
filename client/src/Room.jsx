@@ -1431,22 +1431,22 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
   useEffect(() => {
     if (!socket) return;
 
-    console.log("🔥 Room mounted.", { roomId, socket });
+    console.log(" Room mounted.", { roomId, socket });
 
     const onHost = () => {
-      console.log("🔥 CLIENT RECEIVED HOST EVENT");
+      console.log(" CLIENT RECEIVED HOST EVENT");
       setIsHost(true);
     };
 
     const onStart = ({ question }) => {
-      console.log("🔥 start_duel RECEIVED. Question =", question);
+      console.log(" start_duel RECEIVED. Question =", question);
       setQuestion(question);
       setDuelStarted(true);
       resetEditor();
     };
 
     const onNext = ({ question }) => {
-      console.log("🔥 next_question RECEIVED. Question =", question);
+      console.log(" next_question RECEIVED. Question =", question);
       setQuestion(question);
       resetEditor();
     };
@@ -1462,12 +1462,12 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
 
     // WebRTC signaling handlers (we receive offers/answers/candidates here)
     socket.on("webrtc:offer", async ({ offer }) => {
-      console.log("📩 Received webrtc:offer via socket");
+      console.log(" Received webrtc:offer via socket");
       await handleReceiveOffer(offer);
     });
 
     socket.on("webrtc:answer", async ({ answer }) => {
-      console.log("📩 Received webrtc:answer via socket");
+      console.log("Received webrtc:answer via socket");
       if (peerRef.current) {
         try {
           await peerRef.current.setRemoteDescription(answer);
@@ -1483,21 +1483,21 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
       if (peerRef.current) {
         try {
           await peerRef.current.addIceCandidate(candidate);
-          console.log("➕ Added remote ICE candidate");
+          console.log(" Added remote ICE candidate");
         } catch (err) {
           console.warn("Could not add ICE candidate yet:", err);
         }
       } else {
-        console.log("🔶 Received ICE candidate but peerRef not ready yet — buffering ignored");
+        console.log("Received ICE candidate but peerRef not ready yet — buffering ignored");
       }
     });
 
     // Join or mark host
     if (socket.lastCreatedRoom === roomId) {
-      console.log("🟢 This user CREATED the room → Mark as host");
+      console.log(" This user CREATED the room → Mark as host");
       setIsHost(true);
     } else {
-      console.log("🟠 This user JOINED the room → requesting join");
+      console.log(" This user JOINED the room → requesting join");
       socket.emit("lobby:join_room", { roomId }, (res) => {
         console.log("join_room callback:", res);
         if (!res.ok) alert("Could not join room");
@@ -1527,11 +1527,11 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
   // -------------------- START / NEXT QUESTION -------------------------
   async function startDuel() {
     try {
-      console.log("▶️ Start Duel clicked");
+      console.log(" Start Duel clicked");
       const q = await fetchRandomLeetCode();
-      console.log("📦 LeetCode question fetched:", q);
+      console.log(" LeetCode question fetched:", q);
       socket.emit("room:start_duel", { roomId, question: q });
-      console.log("📡 Emitted room:start_duel");
+      console.log(" Emitted room:start_duel");
     } catch (err) {
       console.error("Error in startDuel:", err);
     }
@@ -1539,12 +1539,12 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
 
   async function nextQuestion() {
     try {
-      console.log("➡️ NEXT QUESTION CLICKED");
+      console.log(" NEXT QUESTION CLICKED");
       const q = await fetchRandomLeetCode();
-      console.log("📦 New question:", q);
+      console.log("New question:", q);
       socket.emit("room:next_question", { roomId, question: q });
     } catch (err) {
-      console.error("❌ Error in nextQuestion:", err);
+      console.error(" Error in nextQuestion:", err);
     }
   }
 
@@ -1577,7 +1577,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
 
       // handle incoming remote stream
       pc.ontrack = (e) => {
-        console.log("🎧 ontrack fired, setting remote stream");
+        console.log(" ontrack fired, setting remote stream");
         if (e.streams && e.streams[0]) {
           setRemoteStream(e.streams[0]);
         }
@@ -1592,7 +1592,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
       };
 
       // create offer
-      console.log("📢 creating offer");
+      console.log("creating offer");
       const offer = await pc.createOffer();
       await pc.setLocalDescription(offer);
 
@@ -1644,7 +1644,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
       };
 
       await pc.setRemoteDescription(offer);
-      console.log("📢 creating answer (answerer)");
+      console.log(" creating answer (answerer)");
       const answer = await pc.createAnswer();
       await pc.setLocalDescription(answer);
 

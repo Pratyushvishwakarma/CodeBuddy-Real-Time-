@@ -334,8 +334,8 @@ html, body {
   justify-content: center;
   align-items: center;
 
-  /* Apply your downloaded background ONLY here */
-  background: url("../backgrounds/programming-background-concept.jpg") no-repeat center center fixed;
+
+  background: url("https://www.shutterstock.com/image-illustration/image-binary-coding-over-purple-600nw-2594331345.jpg") no-repeat center center fixed;
   background-size: cover;
 
   background-color: #0a0a0d; 
