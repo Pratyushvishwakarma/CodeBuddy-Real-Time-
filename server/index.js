@@ -5,7 +5,24 @@ const http = require("http");
 const mongoose = require("mongoose");
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+
+const allowedOrigins = [
+  "https://codebuddy-real-time.vercel.app",
+  "http://localhost:5173"
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true); // allow mobile apps, curl, etc.
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    return callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true,
+}));
+
+
+
 app.use(express.json());
 
 // Routes

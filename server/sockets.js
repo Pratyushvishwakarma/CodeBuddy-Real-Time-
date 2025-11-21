@@ -5,7 +5,9 @@ function initSockets(server) {
   const io = new Server(server, {
     cors: {
       // origin: "*"
-      origin: ["https://codebuddy-real-time.vercel.app", "http://localhost:5173"]
+      origin: ["https://codebuddy-real-time.vercel.app", "http://localhost:5173"],
+       methods: ["GET", "POST"],
+    credentials: true
 ,
     },
   });
@@ -34,7 +36,7 @@ function initSockets(server) {
   const roomId = "room_" + Date.now();
 
   socket.join(roomId);
-console.log("🔥 HOST ASSIGNED:", socket.user.email);
+console.log(" HOST ASSIGNED:", socket.user.email);
   // IMPORTANT: mark the first user as host
   socket.emit("room:host");
 
