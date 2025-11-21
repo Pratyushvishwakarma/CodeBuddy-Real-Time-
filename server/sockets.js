@@ -4,7 +4,9 @@ const jwt = require("jsonwebtoken");
 function initSockets(server) {
   const io = new Server(server, {
     cors: {
-      origin: "*",
+      // origin: "*"
+      origin: ["https://codebuddy-real-time.vercel.app", "http://localhost:5173"]
+,
     },
   });
 
