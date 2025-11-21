@@ -1355,6 +1355,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Editor } from "@monaco-editor/react";
 import "./room.css";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+
+
 
 export default function Room({ socket, roomId }) {
   const [remoteStream, setRemoteStream] = useState(null);
@@ -1366,6 +1369,8 @@ export default function Room({ socket, roomId }) {
   const [duelStarted, setDuelStarted] = useState(false);
 
   const [language, setLanguage] = useState("javascript");
+
+  
 
   const JUDGE0_LANGUAGE_MAP = {
     javascript: 63,
@@ -1399,7 +1404,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
   // Single fetch function (no duplicates)
   async function fetchRandomLeetCode() {
     try {
-      const res = await fetch("http://localhost:4000/api/leetcode/random");
+      const res = await fetch(`${BACKEND_URL}/api/leetcode/random`);
       const q = await res.json();
 
       return {
@@ -1660,7 +1665,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
     setOutput("Running...");
 
     try {
-      const res = await fetch("http://localhost:4000/api/judge/run", {
+      const res = await fetch(`${BACKEND_URL}/api/judge/run`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1684,7 +1689,7 @@ const successSound = new Audio("/sounds/7 Crore Meme Audio Download Mp3.mp3");
     setOutput("Submitting...");
 
     try {
-      const res = await fetch("http://localhost:4000/api/judge/submit", {
+      const res = await fetch(`${BACKEND_URL}/api/judge/submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
