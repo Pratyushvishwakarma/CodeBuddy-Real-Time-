@@ -1,0 +1,436 @@
+/* ===========================
+   AUTH PAGE — GLASS UI + ANIMATION
+=========================== */
+/* 
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle at top left, #3a0ca3, #240046, #000);
+  position: relative;
+  overflow: hidden;
+  color: white;
+  padding: 20px;
+}
+
+/* Floating glowing orbs */
+/* .auth-container::before,
+.auth-container::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  animation: floatGlow 6s infinite alternate ease-in-out;
+}
+
+.auth-container::before {
+  top: -50px;
+  left: -80px;
+  background: #ff00c8;
+}
+
+.auth-container::after {
+  bottom: -100px;
+  right: -60px;
+  background: #4800ff;
+}
+
+@keyframes floatGlow {
+  0% { transform: translateY(0); opacity: 0.5; }
+  100% { transform: translateY(-30px); opacity: 0.8; }
+}
+
+Card
+.auth-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+.input-box {
+  width: 320px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 16px;
+  backdrop-filter: blur(10px);
+  outline: none;
+}
+
+.btn-primary {
+  width: 320px;
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #ff0099, #ff0055);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,0,150,0.4);
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,0,150,0.6);
+}
+
+.toggle-text {
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+.toggle-text span {
+  color: #ff77e9;
+  cursor: pointer;
+  text-decoration: underline;
+}  */
+
+
+/* ===============================
+   AUTH PAGE WRAPPER
+================================*/
+/* .auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Beautiful animated gradient background */
+  /* background: linear-gradient(135deg, #0d0d0d, #1a1a2e, #16213e);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+
+  position: relative;
+  z-index: 10;           
+  overflow: hidden;
+} */
+
+/* Animated gradient BG */
+/* @keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; } */
+
+
+/* ===============================
+   FLOATING LIGHT ORBS
+================================*/
+/* .auth-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  animation: float 6s infinite ease-in-out;
+  pointer-events: none !important;   /* <-- prevents click blocking */
+
+
+/* @keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+} */
+
+/* ===============================
+   AUTH CARD
+================================*/
+/* .auth-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.07);
+  padding: 32px;
+  border-radius: 18px;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 40px rgba(255,255,255,0.1);
+  animation: fadeIn 0.6s ease-out;
+  z-index: 20; /* <-- keeps card above animation */
+/* } */
+
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}  */
+
+/* Title */
+/* .auth-card h2 {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 700;
+} */
+
+/* Inputs */
+/* .input-box {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  backdrop-filter: blur(10px);
+} */
+
+/* .input-box::placeholder {
+  color: #ddd;
+} */
+
+/* Primary Button */
+/* .btn-primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #6a5af9, #c23cff);
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s ease;
+} */
+
+/* .btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(195, 60, 255, 0.6);
+} */
+
+/* Toggle link */
+/* .toggle-text {
+  margin-top: 15px;
+  text-align: center;
+  color: #ddd;
+}
+
+.toggle-text span {
+  color: #c6a8ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.toggle-text span:hover {
+  color: #e0c2ff;
+} */ 
+
+
+
+/* -------------------------
+   AUTH PAGE SAFE STYLING
+-------------------------- */
+
+/* .auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1e1e2f, #0d0d15);
+  padding: 20px;
+  color: #322b5c;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.input-box {
+  width: 280px;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.07);
+  color: white !important;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.input-box:focus {
+  border: 1px solid #8b5cf6;
+}
+
+
+.btn-primary {
+  width: 280px;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: #8b5cf6;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.btn-primary:hover {
+  background: #7c3aed;
+}
+
+
+.toggle-text {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.toggle-text span {
+  color: #a78bfa;
+  cursor: pointer;
+  font-weight: 600;
+} */
+
+
+
+/* ---------------------------------------------------
+   AUTH PAGE CONTAINER (Full 3D Tech Background)
+---------------------------------------------------- */
+/* GLOBAL PAGE BACKGROUND — clean tech pattern */
+/* html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background:
+    url("https://i.imgur.com/Nz5UuRJ.png"),
+    linear-gradient(135deg, #0a0a0f, #111119);
+  background-size: 300px, cover;
+  background-position: center;
+  background-repeat: repeat, no-repeat;
+  background-attachment: fixed;
+} */
+
+/* 
+html, body {
+  background:
+    url("c:\Users\Pratyush\Downloads\programming-background-concept.jpeg")
+    
+} */
+.auth-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Apply your downloaded background ONLY here */
+  background: url("../backgrounds/programming-background-concept.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  background-color: #0a0a0d; 
+background:
+  linear-gradient(135deg, #09090f, #0f0f19),
+  url("../backgrounds/programming-background-concept.jpg") no-repeat center center fixed;
+background-size: cover;
+background-blend-mode: overlay;
+
+
+
+  padding: 0px;
+  animation: fadeIn 0.7s ease;
+  color: rgb(40, 13, 141);
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-container h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+}
+
+.input-box {
+  width: 300px;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+
+  
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white !important;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+
+.input-box:focus {
+  border: 1px solid #a78bfa;
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
+}
+
+.btn-primary {
+  width: 300px;
+  padding: 14px;
+  margin-top: 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+
+  transition: all 0.25s ease;
+}
+
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.8);
+  transform: translateY(-2px);
+}
+
+.toggle-text {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #e5e5e5;
+  text-shadow: 0 0 6px rgba(10, 1, 1, 0.034);
+}
+
+.toggle-text span {
+  color: #c4b5fd;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.toggle-text span:hover {
+  text-shadow: 0 0 12px rgba(196, 181, 253, 0.9);
+  color: white;
+}
+

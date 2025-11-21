@@ -1,0 +1,83 @@
+/* ===========================
+   LOBBY PAGE — NEO CITY THEME
+=========================== */
+/* 
+.lobby-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+Floating lights */
+/* .lobby-container::before,
+.lobby-container::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.45;
+}
+
+.lobby-container::before {
+  background: #4cc9f0;
+  top: -50px;
+  left: -90px;
+}
+.lobby-container::after {
+  background: #7209b7;
+  bottom: -60px;
+  right: -80px;
+}
+
+.lobby-container h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.input-box {
+  width: 280px;
+  padding: 12px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+  width: 280px;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 8px 0;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #f72585, #b5179e);
+  box-shadow: 0 0 20px rgba(245,25,130,0.4);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+  box-shadow: 0 0 20px rgba(76,200,240,0.4);
+}
+.btn-secondary:hover {
+  transform: scale(1.05);
+} */
